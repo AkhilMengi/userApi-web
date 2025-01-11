@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux"
 
 const NavBar = ()=>{
@@ -5,7 +6,11 @@ const NavBar = ()=>{
   const userState = useSelector((store) => store.user);
   const user = userState?.user; // Safely access the nested 'user' object
 
-// console.log("User state in NavBar:", user);
+console.log("User state in NavBar:", user);
+useEffect(() => {
+  console.log("User state updated in NavBar:", user);
+}, [user]); // This runs whenever the user state changes
+console.log("Initial user state in NavBar:", user);
 
  
     return(

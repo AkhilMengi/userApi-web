@@ -18,7 +18,8 @@ const Login = () => {
         try {
             const res = await axios.post("http://localhost:3500/login", { email, password }, { withCredentials: true });
             console.log("Login successful:", res.data.user);
-            dispatch(addUser(res.data.user));
+            dispatch(addUser(res.data ));
+            console.log("Dispatched user to Redux");
             
             // Check user role and navigate accordingly
             if (res.data.user.role === 'admin') {
