@@ -5,6 +5,7 @@ import Login from "./Login"
 import { Provider } from "react-redux"
 import appStore from "./utils/appStore"
 import AdminProfile from './AdminProfile'
+import UserProfile from './UserProfile'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Body />}>
             <Route path="/login" element={<Login />} />
             <Route path="/admin-profile" element={<AdminProfile />} />
+            <Route path="/user-profile" element={<UserProfile/>} />
             </Route>
 
           </Routes>
@@ -27,3 +29,4 @@ function App() {
 }
 
 export default App
+// 

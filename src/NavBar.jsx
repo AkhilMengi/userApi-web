@@ -2,7 +2,11 @@ import { useSelector } from "react-redux"
 
 const NavBar = ()=>{
 
-  const user = useSelector(store=>store.user)
+  const userState = useSelector((store) => store.user);
+  const user = userState?.user; // Safely access the nested 'user' object
+
+// console.log("User state in NavBar:", user);
+
  
     return(
         <div className="navbar bg-neutral-300">
@@ -15,6 +19,7 @@ const NavBar = ()=>{
         <div>
         <p className="flex justify-center"> Welcome<span>{user.name}</span></p>
         </div>
+        
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img
@@ -28,7 +33,7 @@ const NavBar = ()=>{
         <li>
           <a className="justify-between">
             Profile
-            <span className="badge">{user.name}</span>
+            <span className="badge">{user.role}</span>
           </a>
         </li>
         <li><a>Settings</a></li>
@@ -40,5 +45,4 @@ const NavBar = ()=>{
 </div>
     )
 }
-
 export default NavBar
