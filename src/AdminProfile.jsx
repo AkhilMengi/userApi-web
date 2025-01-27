@@ -1,13 +1,16 @@
-import UserTable from "./UserTable"
+import UserTable from "./UserTable";
+import SideNav from "./utils/SideNav";
 
-const AdminProfile = ()=>{
-    return (
-       <div>
-        <h1>Hello</h1>
+const AdminProfile = () => {
+  return (
+    <div className="flex h-screen">
+      <SideNav />
+      <div className="flex-1 p-6 overflow-auto">
         <UserTable />
-       </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default AdminProfile
+export default AdminProfile;
 

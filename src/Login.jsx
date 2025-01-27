@@ -34,7 +34,7 @@ const Login = () => {
       if (userData.user.role === "admin") {
         navigate("/admin-profile"); // Redirect to admin profile
       } else if (userData.user.role === "requestor") {
-        navigate("/user-profile"); // Redirect to user profile
+        navigate("/reconciliation"); // Redirect to user profile
       } else {
         console.error("Unknown role:", userData.user.role);
       }

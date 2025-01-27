@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { addUser } from "./utils/userSlice";
-import NavBar from "./NavBar";
+
 
 const Body = () => {
   const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const Body = () => {
 
   return (
     <div>
-      <NavBar />
+    
       <Outlet />
     </div>
   );
