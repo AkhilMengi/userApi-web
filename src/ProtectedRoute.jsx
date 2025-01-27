@@ -14,12 +14,12 @@ const ProtectedRoute = ({ allowedRoles, children }) => {
   }
 
   if (!allowedRoles.includes(user.role)) {
-    // Show "Not Authorized" message if the role is not allowed
+    // Show "Not Found" message for unauthorized access
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="text-center p-4 border rounded bg-red-100 text-red-600">
-          <h2 className="text-2xl font-semibold">Not Authorized</h2>
-          <p>You do not have permission to access this page.</p>
+        <div className="text-center p-4 border rounded bg-gray-100 text-gray-700">
+          <h2 className="text-2xl font-semibold">Not Found</h2>
+          <p>Please contact admin if you believe this is a mistake.</p>
         </div>
       </div>
     );

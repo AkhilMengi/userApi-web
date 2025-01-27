@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+const initialState = {
+  user: null, // Only store non-sensitive data in Redux
+};
+
 const userSlice = createSlice({
   name: "user",
-  initialState: null, // Start with no user data
+  initialState, // Start with no user data
   reducers: {
     addUser: (state, action) => {
       return action.payload; // Replace state with the new user data

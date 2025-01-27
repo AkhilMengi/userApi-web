@@ -5,7 +5,7 @@ import userReducer from "./userSlice";
 
 // Persist configuration
 const persistConfig = {
-  key: "root",
+  key: "user",
   storage, // Use localStorage
   whitelist: ["user"], // Only persist the user slice
 };

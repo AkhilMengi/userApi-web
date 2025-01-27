@@ -24,11 +24,11 @@ const Login = () => {
       );
 
       const userData = response.data; // The data returned from the server
-      console.log("Login successful:", userData);
+      // console.log("Login successful:", userData);
 
       // Add the user to Redux state
       dispatch(addUser(userData));
-      console.log("User added to Redux:", userData);
+      // console.log("User added to Redux:", userData);
 
       // Navigate based on user role
       if (userData.user.role === "admin") {
